@@ -2,27 +2,30 @@
 #include <cassert>
 using namespace std;
 
+// simple trick to avoid re-changing the class
+typedef char type;
+
 class Stack {
   private:
     int size {};
     int top {};
-    int*  array {};
+    type*  array {};
   public:
   Stack(int size):
     size(size), top(-1) {
-      array = new int[size];
+      array = new type[size];
     }
   
   ~Stack() {
     delete[] array;
   }
 
-  void push(int val) {
+  void push(type val) {
     assert(!isFull());
     array[++top] = val;
   }
 
-  int pop() {
+  type pop() {
     assert(!isEmpty());
     return array[top--];
   }
@@ -48,7 +51,25 @@ class Stack {
 
 };
 
-int main() {
+string reverse_subwords(string line) {
+  string result;
 
+  line+= ' ';
+  Stack stk(line.size());
+
+  for (int i = 0; i < (int) line.size(); ++i) {
+    if (line[i] == ' '){ // get content (now reversed)
+        while(!stk.isEmpty()) {
+          result+= stk.pop();
+        }
+        result += ' ';
+    } else {
+      stk.push(line[i]);
+    }
+  }
+  return result;
+}
+
+int main() {
   return 0;
 }

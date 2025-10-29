@@ -46,5 +46,3 @@
 🎯 Master **Data Structures and Algorithms** to become interview-ready for top software engineering roles.  
 🔥 Build a habit of **daily coding consistency**.  
 💡 Share learnings and insights with the open-source community.
-
----
