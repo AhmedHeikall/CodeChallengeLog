@@ -10,11 +10,11 @@
 - Arrays
 - Linked Lists
 - Stacks & Queues
-- Trees (Binary, BST, Trie, Segment Trees)
+- Trees (Binary, BST, Trie, AVL)
 - Graphs
 - Heaps / Priority Queues
 - Hash Maps / Sets
-- Strings & Sliding Window
+- Strings
 
 </details>
 
