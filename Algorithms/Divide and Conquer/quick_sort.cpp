@@ -39,6 +39,7 @@ void quicksort(vector<int> &vec, int start, int end) {
 	quicksort(vec, start, pivot_idx - 1);
 	quicksort(vec, pivot_idx + 1, end);
 }
+
 void quicksort(vector<int> &vec) {
 	quicksort(vec, 0, (int) vec.size() - 1);
 }
@@ -47,7 +48,7 @@ int main() {
 	// no duplicate
 	vector<int> vec { 12, 35, 87, 26, 9, 28, 7 };
 
-	quicksort(vec);
+	quicksort(vec); 
 	for (int i = 0; i < (int) vec.size(); ++i)
 		cout << vec[i] << " ";
 
